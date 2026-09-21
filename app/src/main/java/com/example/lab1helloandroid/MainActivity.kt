@@ -8,10 +8,32 @@ class	MainActivity	:	AppCompatActivity()	{
     override	fun	onCreate(savedInstanceState:	Bundle?)	{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val	message	=	findViewById<TextView>(R.id.textViewMessage)
-        val	button	=	findViewById<Button>(R.id.buttonChangeText)
-        button.setOnClickListener	{
-            message.text	=	"Button	clicked!"
+
+        var count = 0
+        var step = 1
+
+        val	message	=	findViewById<TextView>(R.id.textViewOutput)
+        val	addButton	=	findViewById<Button>(R.id.buttonAdd)
+        val subtractButton = findViewById<Button>(R.id.buttonSubtract)
+        val resetButton = findViewById<Button>(R.id.buttonReset)
+        val stepButton = findViewById<Button>(R.id.buttonStep)
+        addButton.setOnClickListener	{
+            count += step
+            message.text = count.toString()
+        }
+
+        subtractButton.setOnClickListener {
+            count -= step
+            message.text = count.toString()
+        }
+
+        resetButton.setOnClickListener {
+            count = 0
+            step = 1
+            message.text = getString(R.string._0)
+        }
+        stepButton.setOnClickListener {
+            step = 2
         }
     }
 }
