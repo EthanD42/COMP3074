@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="not_available_right_now">Not available right now</string>
+    <string name="longitude">Longitude</string>
+    <string name="get_current_location">Get Current Location</string>
+    <string name="latitude">Latitude</string>
+    <string name="gps_location">GPS Location</string>
+    <string name="find_your_current_spoot">Find your current spoot</string>
+</resources>
